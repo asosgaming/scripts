@@ -1,0 +1,4 @@
+[submodule "ASoS"]
+	path = ASoS
+	url = https://github.com/asosgaming/perl-modules.git
+	branch = develop
