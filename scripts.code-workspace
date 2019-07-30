@@ -1,0 +1,181 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {},
+		"better-comments.tags": [
+			{
+				"tag": "!",
+				"color": "#9933FF",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "?",
+				"color": "#999900",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "-",
+				"color": "#474747",
+				"strikethrough": true,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": ".",
+				"color": "#606060",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "^",
+				"color": "#004C99",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "/",
+				"color": "#99004C",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "TODO",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "BUG",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "FIXME",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "IDEA",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "ERROR",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "PIN",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "REMOVE",
+				"color": "#A0A0A0",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			},
+			{
+				"tag": "#",
+				"color": "#006633",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			  },
+			{
+				"tag": "*",
+				"color": "#009900",
+				"strikethrough": false,
+				"backgroundColor": "transparent"
+			}
+		],
+		"todo-tree.expanded": true,
+		"todo-tree.tagsOnly": true,
+		"todo-tree.tags": ["TODO", "FIXME", "BUG", "IDEA", "ERROR", "PIN", "REMOVE"],
+		"todo-tree.showCountsInTree": true,
+		"todo-tree.defaultHighlight": {
+			"icon": "alert",
+			"type": "text",
+			"foreground": "red",
+			"background": "white",
+			"opacity": 50,
+			"iconColour": "blue"
+		},
+		"todo-tree.customHighlight": {
+			"TODO": {
+				"icon": "tag",
+				"type": "tag-and-comment",
+				"rulerColour": "#66FF66",
+				"rulerLane": "right",
+				"foreground": "#66FF66",
+				"background": "black",
+				"iconColour": "#66FF66"
+			},
+			"IDEA": {
+				"icon": "info",
+				"type": "tag-and-comment",
+				"rulerColour": "#FFFF66",
+				"rulerLane": "right",
+				"foreground": "#FFFF66",
+				"background": "black",
+				"iconColour": "#FFFF66"
+			},
+			"PIN": {
+				"icon": "pin",
+				"type": "tag-and-comment",
+				"rulerColour": "#66FFFF",
+				"rulerLane": "right",
+				"foreground": "#66FFFF",
+				"background": "black",
+				"iconColour": "#66FFFF"
+			},
+			"BUG": {
+				"icon": "bug",
+				"type": "tag-and-comment",
+				"rulerColour": "#FFB266",
+				"rulerLane": "full",
+				"foreground": "#FFB266",
+				"background": "black",
+				"iconColour": "#FFB266"
+			},
+			"ERROR": {
+				"icon": "alert",
+				"type": "tag-and-comment",
+				"rulerColour": "#FF3333",
+				"rulerLane": "full",
+				"foreground": "#FF3333",
+				"background": "black",
+				"iconColour": "#FF3333"
+			},
+			"FIXME": {
+				"icon": "code",
+				"type": "tag-and-comment",
+				"rulerColour": "#FF3399",
+				"rulerLane": "full",
+				"foreground": "#FF3399",
+				"background": "black",
+				"iconColour": "#FF3399"
+			},
+			"REMOVE": {
+				"icon": "x",
+				"type": "tag-and-comment",
+				"rulerColour": "#FF33FF",
+				"rulerLane": "full",
+				"foreground": "#FF33FF",
+				"background": "black",
+				"iconColour": "#FF33FF"
+			}
+		},
+		"todo-tree.labelFormat": "${after}",
+		"todo-tree.regex": "(#\\s*($TAGS)|^\\s*- \\[ \\])"
+	}
+}
