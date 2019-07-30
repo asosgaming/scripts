@@ -1,0 +1,91 @@
+#!/usr/bin/perl -w
+
+################################################################################
+#* Copyright Ⓒ 2019 ASoS Gaming
+################################################################################
+#* Permission is hereby granted, free of charge, to any person obtaining a copy
+#* of this software and associated documentation files (the "Software"), to deal
+#* in the Software without restriction, including without limitation the rights
+#* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#* copies of the Software, and to permit persons to whom the Software is
+#* furnished to do so, subject to the following conditions:
+#*
+#* The above copyright notice and this permission notice shall be included in all
+#* copies or substantial portions of the Software.
+#*
+#* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#* SOFTWARE.
+################################################################################
+
+use v5.10;
+use strict;
+use warnings;
+use Cwd qw( abs_path );
+use File::Basename qw( dirname );
+use lib dirname(abs_path($0));
+#use ASoS::Alias;
+use Config;
+use CPAN;
+#use ASoS::Depend::Lazy;
+
+use ASoS::Say;
+use ASoS::Log;
+use ASoS::File;
+use ASoS::Prompt;
+use ASoS::Pkg;
+use ASoS::Cfg;
+
+use ASoS::Common qw(:ALL);
+use Data::Dumper qw(Dumper);
+
+################################################################################
+#* Comment types
+################################################################################
+# comment
+## comment
+#* comment
+#! variable description
+#? sub description
+#/ private sub description
+#- removed
+#^ sub comments
+#. sub comments
+################################################################################
+#TODO: things to do
+#IDEA: ideas
+#PIN: pinned location
+#BUG: bugs to fix
+#ERROR: errors to fix
+#FIXME: things to fix
+#REMOVE: things to remove
+################################################################################
+
+#^ set log level
+$log{LOGLEVEL}->(MOD_DEBUG);
+#. output level number
+$say{INFO}->("Log level number is '".WHITE.$log{LOGLEVEL}->().DEFAULT."'");
+
+#. output BIN hash
+#-$say{OK}->(Data::Dumper->Dump([\%BIN], [qw(BIN)]));
+#. output OS hash
+#-$say{OK}->(Data::Dumper->Dump([\%OS], [qw(OS)]));
+#. output PERL hash
+#-$say{OK}->(Data::Dumper->Dump([\%PERL], [qw(PERL)]));
+#. output RESULT hash
+#-map{$say{OK}->("$_ => $RESULT{$_}")}keys %RESULT;
+#-$say{OK}->(Data::Dumper->Dump([\%RESULT], [qw(RESULT)]));
+
+#. log BIN hash
+$log{DEBUG}->(-var => \%BIN, -name => 'BIN');
+#. log OS and PERL hash
+$log{DEBUG}->(-vars => [\%OS, \%PERL], -names => ['OS', 'PERL']);
+#. log RESULT hash
+$log{DEBUG}->(-vars => [\%RESULT], -names => [qw(RESULT)]);
+
+$pkg{remove}->("nano");
+$pkg{install}->("nano");
