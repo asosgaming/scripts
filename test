@@ -87,5 +87,23 @@ $log{DEBUG}->(-vars => [\%OS, \%PERL], -names => ['OS', 'PERL']);
 #. log RESULT hash
 $log{DEBUG}->(-vars => [\%RESULT], -names => [qw(RESULT)]);
 
-$pkg{remove}->("nano");
-$pkg{install}->("nano");
+$file{run}->(
+    -app => 'ls', '/', 
+    -centos => {
+        -args => '-la', 
+        -values => ['/home']
+    },
+    -centos6 => {
+        -args => '-l', 
+        -values => ['/etc']
+    },
+    -centos7 => {
+        -app => 'ls', 
+        -args => '-A', 
+        -values => ['/root']
+    },
+    -success => "files done"
+);
+
+#$pkg{remove}->("nano");
+#$pkg{install}->("nano");
